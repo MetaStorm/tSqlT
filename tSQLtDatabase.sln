@@ -12,6 +12,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Schema", "Schema", "{E8E2F171-064E-48F6-9FB7-D0EDA19A3BA3}"
 	ProjectSection(SolutionItems) = preProject
 		ProdToProject.scmp = ProdToProject.scmp
+		QAToProd.scmp = QAToProd.scmp
+		QAToProject.scmp = QAToProject.scmp
 	EndProjectSection
 EndProject
 Global
