@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Jira]
+    AUTHORIZATION [dbo];
+

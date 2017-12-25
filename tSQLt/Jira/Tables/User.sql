@@ -1,0 +1,6 @@
+﻿CREATE TABLE [Jira].[User] (
+    [Key]     NVARCHAR (50)  NOT NULL,
+    [Display] NVARCHAR (128) NOT NULL,
+    CONSTRAINT [PK_User] PRIMARY KEY CLUSTERED ([Key] ASC)
+);
+

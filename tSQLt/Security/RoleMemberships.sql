@@ -1,0 +1,2 @@
+﻿ALTER ROLE [db_owner] ADD MEMBER [USMRTPWSQLP02\SQL_DatahubUsers];
+

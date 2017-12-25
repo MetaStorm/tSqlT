@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [SWIFT]
+    AUTHORIZATION [dbo];
+

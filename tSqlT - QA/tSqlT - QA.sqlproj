@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>tSQLt</Name>
+    <Name>tSqlT___QA</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
-    <ProjectGuid>{68afb2e5-fbd8-4364-ae08-8473c9ae9797}</ProjectGuid>
+    <ProjectGuid>{b34a0c08-c7b0-44eb-9d06-1ee92c1e3794}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
-    <RootNamespace>tSQLt</RootNamespace>
-    <AssemblyName>tSQLt</AssemblyName>
+    <RootNamespace>tSqlT___QA</RootNamespace>
+    <AssemblyName>tSqlT___QA</AssemblyName>
     <ModelCollation>1033, CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
@@ -79,7 +79,6 @@
     <Folder Include="jiraschema\Views\" />
     <Folder Include="Jira\Views\" />
     <Folder Include="Cron\Views\" />
-    <Folder Include="Security\" />
     <Folder Include="dbo\Functions\" />
     <Folder Include="Jira\Functions\" />
     <Folder Include="dbo\Stored Procedures\" />
@@ -91,6 +90,7 @@
     <Folder Include="MIS\" />
     <Folder Include="MIS\Stored Procedures\" />
     <Folder Include="Jira\Stored Procedures\" />
+    <Folder Include="Security\" />
     <Folder Include="test\Synonyms\" />
     <Folder Include="ReportServer\Synonyms\" />
     <Folder Include="Pershing\" />
@@ -106,21 +106,21 @@
     <Folder Include="ADS\Synonyms\" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="test\Tables\FakeException.sql" />
     <Build Include="test\Tables\user_access_request.sql" />
+    <Build Include="test\Tables\FakeException.sql" />
     <Build Include="test\Tables\http_monitor_failure.sql" />
     <Build Include="temp\Tables\AllBahamasWithMiami.sql" />
-    <Build Include="meta\Tables\Action.sql" />
     <Build Include="meta\Tables\TestTableJiraSettings.sql" />
+    <Build Include="meta\Tables\Action.sql" />
     <Build Include="Jira\Tables\User.sql" />
     <Build Include="Jira\Tables\ProjectIssueType.sql" />
     <Build Include="Jira\Tables\WorkflowTrantisionWithPosition.sql" />
+    <Build Include="Jira\Tables\Workflow.sql" />
     <Build Include="Jira\Tables\TransitionAction.sql" />
     <Build Include="Jira\Tables\LinkedClone.sql" />
     <Build Include="Jira\Tables\ProjectIssueTypeWorkflow.sql" />
-    <Build Include="Jira\Tables\Workflow.sql" />
-    <Build Include="Jira\Tables\WorkflowScheme.sql" />
     <Build Include="Jira\Tables\WorkflowTransition.sql" />
+    <Build Include="Jira\Tables\WorkflowScheme.sql" />
     <Build Include="Jira\Tables\UserGroup.sql" />
     <Build Include="Cron\Tables\CronFailedTask.sql" />
     <Build Include="Cron\Tables\CronGroup.sql" />
@@ -133,54 +133,57 @@
     <Build Include="tSQLt\Views\Tests.sql" />
     <Build Include="tSQLt\Views\TestClasses.sql" />
     <Build Include="tSQLt\Views\Private_SysTypes.sql" />
-    <Build Include="test\Views\olympic_missing_cost_account.sql" />
+    <Build Include="test\Views\olympic_custodian_with_balance.sql" />
     <Build Include="test\Views\swift_security_master.sql" />
+    <Build Include="test\Views\olympic_missing_cost_account.sql" />
+    <Build Include="test\Views\pershing_link_discrepancy.sql" />
+    <Build Include="test\Views\olympic_portfolio_capital_duplicate.sql" />
+    <Build Include="test\Views\olympic_managementgroup_as_rm.sql" />
+    <Build Include="test\Views\olympic_rm_missing.sql" />
+    <Build Include="test\Views\cip__pershing_link_discrepancy.sql" />
+    <Build Include="test\Views\banker_notes_olympic_ads.sql" />
+    <Build Include="test\Views\olympic_banker_dups.sql" />
+    <Build Include="test\Views\pershing_missing_link.sql" />
+    <Build Include="test\Views\Olympic.Banker.ADS.sql" />
     <Build Include="test\Views\swift_mutual_funds.sql" />
     <Build Include="test\Views\olympic_portfolio_duplicate.sql" />
-    <Build Include="test\Views\olympic_custodian_with_balance.sql" />
-    <Build Include="test\Views\olympic_banker_dups.sql" />
-    <Build Include="test\Views\cip__pershing_link_discrepancy.sql" />
-    <Build Include="test\Views\pershing_missing_link.sql" />
-    <Build Include="test\Views\pershing_link_discrepancy.sql" />
+    <Build Include="test\Views\DataHub.B2B.vClient.sql" />
     <Build Include="test\Views\CronHandledTask.sql" />
     <Build Include="test\Views\CronFailedTask.sql" />
-    <Build Include="test\Views\Olympic.Banker.ADS.sql" />
-    <Build Include="test\Views\DataHub.B2B.vClient.sql" />
     <Build Include="test\Views\discrepancy_mail_address.sql" />
     <Build Include="ReportServer\Views\vReportInfo.sql" />
     <Build Include="meta\Views\TestTableJiraSettingsTest.sql" />
     <Build Include="meta\Views\vTestTableJiraSettings_10.sql" />
-    <Build Include="meta\Views\TransitionActionTest.sql" />
     <Build Include="meta\Views\LinkedCloneTest.sql" />
-    <Build Include="meta\Views\vTransitionActionTest_10.sql" />
     <Build Include="meta\Views\vLinkedCloneTest_10.sql" />
-    <Build Include="jiraschema\Views\JiraWorkflowScheme.sql" />
+    <Build Include="meta\Views\vTransitionActionTest_10.sql" />
+    <Build Include="meta\Views\TransitionActionTest.sql" />
     <Build Include="jiraschema\Views\JiraWorkflow.sql" />
+    <Build Include="jiraschema\Views\JiraWorkflowScheme.sql" />
     <Build Include="Jira\Views\TicketsToLinkClone.sql" />
     <Build Include="Jira\Views\Project.sql" />
-    <Build Include="Jira\Views\vWorkflowTransition.sql" />
-    <Build Include="Jira\Views\vProjectIssueTypeWorkflow.sql" />
-    <Build Include="Jira\Views\ProjectIssueTypeWorkflowTransition.sql" />
-    <Build Include="Jira\Views\ProjectIssueTypeWorkflowStep.sql" />
-    <Build Include="Jira\Views\JIRA_Transition.sql" />
-    <Build Include="Jira\Views\JIRA_Issue_LinkedIssue.sql" />
-    <Build Include="Jira\Views\JIRA_LinkedIssue.sql" />
-    <Build Include="Jira\Views\JIRA_Issue.sql" />
-    <Build Include="Jira\Views\vProjectIssueType.sql" />
     <Build Include="Jira\Views\vProjectWorkflowSchemeDraft.sql" />
     <Build Include="Jira\Views\vProjectWorkflowScheme.sql" />
     <Build Include="Jira\Views\vProjectIssueTypeSchema.sql" />
     <Build Include="Jira\Views\vIssueStatus.sql" />
+    <Build Include="Jira\Views\ProjectIssueTypeWorkflowTransition.sql" />
+    <Build Include="Jira\Views\vWorkflowTransition.sql" />
+    <Build Include="Jira\Views\JIRA_Transition.sql" />
+    <Build Include="Jira\Views\JIRA_Issue_LinkedIssue.sql" />
+    <Build Include="Jira\Views\JIRA_LinkedIssue.sql" />
+    <Build Include="Jira\Views\JIRA_Issue.sql" />
+    <Build Include="Jira\Views\ProjectIssueTypeWorkflowStep.sql" />
+    <Build Include="Jira\Views\vProjectIssueTypeWorkflow.sql" />
+    <Build Include="Jira\Views\vProjectIssueType.sql" />
     <Build Include="Jira\Views\WorkflowStep.sql" />
     <Build Include="Cron\Views\vCronTask.sql" />
     <Build Include="Cron\Views\vCronTaskTest.sql" />
-    <Build Include="Security\RoleMemberships.sql" />
     <Build Include="dbo\Functions\Levenshtein2.sql" />
     <Build Include="dbo\Functions\LEVENSHTEIN.sql" />
     <Build Include="dbo\Functions\fStripCharacters.sql" />
     <Build Include="dbo\Functions\fClientAccountDashboard.sql" />
-    <Build Include="Jira\Functions\GetWorkflowSteps.sql" />
     <Build Include="Jira\Functions\GetWorkflowTransitions2.sql" />
+    <Build Include="Jira\Functions\GetWorkflowSteps.sql" />
     <Build Include="dbo\Functions\XMLTable.sql" />
     <Build Include="dbo\Functions\Split.sql" />
     <Build Include="dbo\Functions\fAccountInfo.sql" />
@@ -215,19 +218,21 @@
     <Build Include="test\Synonyms\client_banker_managementgroup.sql" />
     <Build Include="test\Synonyms\Banker.sql" />
     <Build Include="ReportServer\Synonyms\Catalog.sql" />
-    <Build Include="Pershing\Synonyms\GCUS.A.sql" />
     <Build Include="Pershing\Synonyms\ACCT_ACCF.I.sql" />
     <Build Include="Pershing\Synonyms\ACCT_ACCF.B.sql" />
     <Build Include="Pershing\Synonyms\ACCT_ACCF.A.sql" />
+    <Build Include="Pershing\Synonyms\GCUS.A.sql" />
+    <Build Include="olympic\Synonyms\vCustodianBalance.sql" />
+    <Build Include="olympic\Synonyms\vSecurityMasterTest.sql" />
     <Build Include="olympic\Synonyms\FDBDOS.sql" />
     <Build Include="olympic\Synonyms\FDBCLI.sql" />
-    <Build Include="olympic\Synonyms\vSecurityMasterTest.sql" />
-    <Build Include="olympic\Synonyms\vCustodianBalance.sql" />
     <Build Include="olympic\Synonyms\ExternalAccountLink.sql" />
     <Build Include="olympic\Synonyms\FDBNUM.sql" />
-    <Build Include="Notes\Synonyms\Source_UOfficers.sql" />
     <Build Include="Notes\Synonyms\vServiceStep.sql" />
+    <Build Include="Notes\Synonyms\Source_UOfficers.sql" />
     <Build Include="MIS\Synonyms\SourceManagementGroup.sql" />
+    <Build Include="jiraschema\Synonyms\draftworkflowscheme.sql" />
+    <Build Include="jiraschema\Synonyms\fieldconfigscheme.sql" />
     <Build Include="jiraschema\Synonyms\changeitem.sql" />
     <Build Include="jiraschema\Synonyms\changegroup.sql" />
     <Build Include="jiraschema\Synonyms\issuelink.sql" />
@@ -243,8 +248,6 @@
     <Build Include="jiraschema\Synonyms\fieldconfigschemeissuetype.sql" />
     <Build Include="jiraschema\Synonyms\configurationcontext.sql" />
     <Build Include="jiraschema\Synonyms\project.sql" />
-    <Build Include="jiraschema\Synonyms\fieldconfigscheme.sql" />
-    <Build Include="jiraschema\Synonyms\draftworkflowscheme.sql" />
     <Build Include="Jira\Synonyms\jiraworkflows.sql" />
     <Build Include="ClientDataSynchronization\Synonyms\Discrepancies.sql" />
     <Build Include="ADS\Synonyms\User.sql" />

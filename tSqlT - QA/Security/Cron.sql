@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Cron]
+    AUTHORIZATION [dbo];
+
